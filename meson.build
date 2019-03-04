@@ -8,4 +8,6 @@ dl = cpp.find_library('dl', required: true)
 gl = dependency('GL')
 
 
-library('bx', 'bx/src/amalgamated.cpp', include_directories: [bxHeaders, thirdParty], dependencies: [dl, gl, pthread])
+bx = library('bx', 'bx/src/amalgamated.cpp', include_directories: [bxHeaders, thirdParty], dependencies: [dl, gl, pthread])
+
+bx_dep = declare_dependency(include_directories: [bxHeaders, thirdParty], link_with: [bx])
