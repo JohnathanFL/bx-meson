@@ -1,0 +1,3 @@
+[submodule "bx"]
+	path = bx
+	url = git://github.com/bkaradzic/bx.git
